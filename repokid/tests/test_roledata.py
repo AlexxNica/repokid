@@ -146,7 +146,7 @@ class TestRoledata(object):
         mock_call_hooks.return_value = {'permissions': set(['service_1:action_1', 'service_1:action_2',
                                                             'service_4:action_1'])}
 
-        repoable_permissions = repokid.utils.roledata._get_repoable_permissions('test_name', permissions, aa_data,
+        repoable_permissions = repokid.utils.roledata._get_repoable_permissions(None, 'test_name', permissions, aa_data,
                                                                                 no_repo_permissions, minimum_age,
                                                                                 hooks)
         # service_1:action_3 and action_4 are unsupported actions, service_2 is an unsupported service, service_3
